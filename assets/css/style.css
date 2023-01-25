@@ -1187,8 +1187,8 @@
     color: #666;
 }
 
-.home-product-item__liked-icon {
-    display: none;
+.fa-solid {
+    display: none !important;
 }
 
 .home-product-item__like-icon.fa-regular {
