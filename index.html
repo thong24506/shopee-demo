@@ -1356,20 +1356,14 @@
     </div>
 
     <script>
-        const likeIcon = document.querySelectorAll('.home-product-item__like-icon');
-        const likedIcon = document.querySelectorAll('.home-product-item__liked-icon');
-        var lengths = likeIcon.length;
-        for (var i = 0; i < lengths; i++) {
-            likeIcon[i].onclick = function(e) {
-            e.stopPropagation();
-            likeIcon[i].classList.remove('open');
-            likedIcon[i].classList.add('open');
+        var likeIcon = document.querySelectorAll('.home-product-item__like-icon');
+        var likeIconLength = likeIcon.length;
+        for (var i = 0; i < likeIconLength; i++) {
+            likeIcon[i].onclick = function (e) {
+                e.stopPropagation();
+                e.target.classList.toggle('fa-solid');
+                e.target.classList.toggle('fa-regular');
             }
-            likedIcon[i].addEventListener('click', function (e) {
-            e.stopPropagation();
-            likeIcon[i].classList.add('open');
-            likedIcon[i].classList.remove('open');
-        })
         }
     </script>
 </body>
