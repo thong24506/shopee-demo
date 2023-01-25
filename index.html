@@ -1358,11 +1358,13 @@
     <script>
         const likeIcon = document.querySelector('.home-product-item__like-icon');
         const likedIcon = document.querySelector('.home-product-item__liked-icon');
-        likeIcon.addEventListener('click', function () {
+        likeIcon.addEventListener('click', function (e) {
+            e.stopPropagation();
             likeIcon.classList.remove('open');
             likedIcon.classList.add('open');
         })
-        likedIcon.addEventListener('click', function () {
+        likedIcon.addEventListener('click', function (e) {
+            e.stopPropagation();
             likeIcon.classList.add('open');
             likedIcon.classList.remove('open');
         })
