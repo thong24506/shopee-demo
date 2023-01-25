@@ -1360,7 +1360,7 @@
         var likeIconLength = likeIcon.length;
         for (var i = 0; i < likeIconLength; i++) {
             likeIcon[i].onclick = function (e) {
-                e.stopPropagation();
+                e.preventDefault();
                 e.target.classList.toggle('fa-solid');
                 e.target.classList.toggle('fa-regular');
             }
